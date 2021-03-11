@@ -6,7 +6,7 @@
 
 
 ### Код взят отсуда и чуток доработан https://github.com/sylefeb/VoxSurf
-#### Также используется [вот этот репозиторий]https://github.com/sylefeb/LibSL-small/tree/57f6f3a4c97a551b1513f202ff286b04ef586567
+#### Также используется [вот этот репозиторий](https://github.com/sylefeb/LibSL-small/tree/57f6f3a4c97a551b1513f202ff286b04ef586567)
 
 
 ## Другие варианты вокселизаторов:
