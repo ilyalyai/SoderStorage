@@ -2,7 +2,7 @@
 ## Тут все что связано с вокселизатором и ВКР, собственно
 
 
-### Отчет к этой части Voxelizer/Отчет.pdf 
+### Отчет к этой части [Отчет.pdf](https://github.com/ilyalyai/SoderStorage/blob/main/Voxelizer/%D0%9E%D1%82%D1%87%D0%B5%D1%82.pdf)
 
 
 ### Код взят отсуда и чуток доработан https://github.com/sylefeb/VoxSurf
