@@ -8,7 +8,7 @@
 ### Код взят отсуда и чуток доработан https://github.com/sylefeb/VoxSurf
 #### Также используется [вот этот репозиторий](https://github.com/sylefeb/LibSL-small/tree/57f6f3a4c97a551b1513f202ff286b04ef586567)
 
-####[Матлабовская штука, в итоге получаю сетку, скорее всего будет очень удобно ](https://www.mathworks.com/matlabcentral/fileexchange/27390-mesh-voxelisation)
+#### [Матлабовская штука, в итоге получаю сетку, скорее всего будет очень удобно подавать на вход](https://www.mathworks.com/matlabcentral/fileexchange/27390-mesh-voxelisation)
 
 
 ## Другие варианты вокселизаторов:
