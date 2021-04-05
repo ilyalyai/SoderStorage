@@ -15,16 +15,18 @@ vector<Mat> readImgs(string filePath)
 
 vector<Mat> CameraCalib()
 {
-
-//---------------------------------  Калибровка шахматной доской
-
 	// создание и заполнение вектора иображений
 	vector<Mat> imgsChess;
-	imgsChess = readImgs("C://Users//Ilya//source//repos//lab5_CV//Chess");
+	imgsChess = readImgs("C://Users//Ilya//source//repos//lab5_CV//Photo_matlab");
+	if (imgsChess.empty())
+	{
+		cout << "НЕ НАЙДЕНЫ ИЗОБРАЖЕНИЯ!";
+		return {};
+	}
 
 	// размеры шахматной доски
 	int CHECKERBOARD[2]{ 6, 9 };
-	
+
 	// создание вектора из векторов 3D точек для каждого изображения
 	vector<vector<Point3f> > objpoints;
 
@@ -36,7 +38,7 @@ vector<Mat> CameraCalib()
 	for (int i = 0; i < CHECKERBOARD[1]; i++)
 	{
 		for (int j = 0; j < CHECKERBOARD[0]; j++)
-			objp.push_back(Point3f(j, i, 0));
+			objp.emplace_back(j, i, 0);
 	}
 
 	Mat gray;
@@ -48,7 +50,7 @@ vector<Mat> CameraCalib()
 	{
 		cvtColor(imgsChess[i], gray, COLOR_BGR2GRAY);
 
-	// нахождение углов на шахматной доске
+		// нахождение углов на шахматной доске
 		success = findChessboardCorners(gray, Size(CHECKERBOARD[0], CHECKERBOARD[1]), corner_pts, CALIB_CB_ADAPTIVE_THRESH | CALIB_CB_FAST_CHECK | CALIB_CB_NORMALIZE_IMAGE);
 
 		if (success)
@@ -61,7 +63,6 @@ vector<Mat> CameraCalib()
 			objpoints.push_back(objp);
 			imgpoints.push_back(corner_pts);
 		}
-
 	}
 
 	Mat cameraMatrixChess, distCoeffsChess, R, T;
@@ -73,9 +74,5 @@ vector<Mat> CameraCalib()
 	resultChessBoard << cameraMatrixChess;
 	resultChessBoard.close();
 
-	return {cameraMatrixChess, distCoeffsChess, R, T};
-	cout << "cameraMatrix : " << cameraMatrixChess << endl;
-	cout << "distCoeffs : " << distCoeffsChess << endl;
-	cout << "Rotation vector : " << R << endl;
-	cout << "Translation vector : " << T << endl;
+	return { cameraMatrixChess, distCoeffsChess, R, T };
 }

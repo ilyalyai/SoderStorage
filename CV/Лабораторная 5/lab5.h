@@ -14,4 +14,3 @@ using namespace std;
 vector<Mat> CameraCalib();
 void DrawCube(Ptr<aruco::Dictionary> dictionary, Mat cameraMatrix, Mat distCoeffs);
 vector<Mat> readImgs(string filePath);
-

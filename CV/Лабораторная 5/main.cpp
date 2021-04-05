@@ -3,6 +3,7 @@
 int main()
 {
 	setlocale(LC_ALL, "Russian");
+
 	// создание доски аруко
 	Ptr<aruco::Dictionary> dictionary = getPredefinedDictionary(aruco::DICT_6X6_250);
 	Ptr<aruco::GridBoard> board = aruco::GridBoard::create(5, 7, 0.028, 0.007, dictionary);
@@ -11,23 +12,27 @@ int main()
 	//imwrite("boardImage.png", boardImage);
 
 	Ptr<aruco::DetectorParameters> parameters = aruco::DetectorParameters::create();
-
-	// создание и заполнение вектора иображений
+	// создание и заполнение вектора изображений
 	vector<Mat> imgs;
-	imgs = readImgs("C://Users//Ilya//source//repos//lab5_CV//Photo_Andre");
+	imgs = readImgs("C://Users//Ilya//source//repos//lab5_CV//Aruco");
+	if(imgs.empty())
+	{
+		cout << "НЕ НАЙДЕНЫ ИЗОБРАЖЕНИЯ!";
+		return 0;
+	}
 
 	// калибровка
 	vector<vector<vector<Point2f>>> allCorners;
-	vector<vector<int>>allIds;
+	vector<vector<int>> allIds;
 	Size imgSize;
 
 	//заполнение векторов allCorners и allIds
 	for (int i = 0; i < imgs.size(); i++)
 	{
-		vector< int > ids;
-		vector< vector< Point2f > > corners, rejected;
+		vector<int> ids;
+		vector<vector<Point2f>> corners, rejected;
 		// detect markers
-		aruco::detectMarkers(imgs[i], dictionary, corners, ids, parameters, rejected);
+		detectMarkers(imgs[i], dictionary, corners, ids, parameters, rejected);
 		allCorners.push_back(corners);
 		allIds.push_back(ids);
 		imgSize = imgs[i].size();
@@ -40,7 +45,7 @@ int main()
 
 	for (int i = 0; i < allCorners.size(); i++)
 	{
-		markerCounterPerFrame.push_back((int)allCorners[i].size());
+		markerCounterPerFrame.push_back(static_cast<int>(allCorners[i].size()));
 		for (int j = 0; j < allCorners[i].size(); j++)
 		{
 			allCornersConcatenated.push_back(allCorners[i][j]);
@@ -59,38 +64,46 @@ int main()
 	resultAruco.open("C://Users//Ilya//source//repos//lab5_CV////lab5_CV//cameraMatrixAruco.txt", ios::out);
 	resultAruco << cameraMatrix;
 	resultAruco.close();
-	
+
 	vector<Mat> resultCalib = CameraCalib();
-	
+	if(resultCalib.empty())
+	{
+		cout << "НЕ НАЙДЕНЫ ИЗОБРАЖЕНИЯ!";
+		return 0;
+	}
+
+
 	system("cls");
-	while(1)
+	while (true)
 	{
 		cout << "Выберите задание (от 0 до 3, 4- выход):" << endl;
 		char b = _getch();
 		switch (b)
 		{
-			case '0':
-				imshow("boardImage", boardImage);
-				while (waitKey(1) != 27){}
-				destroyAllWindows();
-				break;
-			case '1':
-				cout << "cameraMatrix : " << cameraMatrix << endl;
-				cout << arucoRepErr << endl;
-				break;
-			case '2':
-				cout << "cameraMatrix : " << resultCalib[0] << endl;
-				cout << "distCoeffs : " << resultCalib[1] << endl;
-				cout << "Rotation vector : " << resultCalib[2] << endl;
-				cout << "Translation vector : " << resultCalib[3] << endl;
-				break;
-			case '3':
-				DrawCube(dictionary, cameraMatrix, distCoeffs);
-				break;
-			case '4':
-				return 0;
-			default: 
-				break;
+		case '0':
+			imshow("boardImage", boardImage);
+			while (waitKey(1) != 27)
+			{
+			}
+			destroyAllWindows();
+			break;
+		case '1':
+			cout << "cameraMatrix : " << cameraMatrix << endl;
+			cout << arucoRepErr << endl;
+			break;
+		case '2':
+			cout << "cameraMatrix : " << resultCalib[0] << endl;
+			cout << "distCoeffs : " << resultCalib[1] << endl;
+			cout << "Rotation vector : " << resultCalib[2] << endl;
+			cout << "Translation vector : " << resultCalib[3] << endl;
+			break;
+		case '3':
+			DrawCube(dictionary, cameraMatrix, distCoeffs);
+			break;
+		case '4':
+			return 0;
+		default:
+			break;
 		}
 	}
 }
