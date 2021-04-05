@@ -1,4 +1,40 @@
 #include "lab5.h"
+int godPleaseShowMeWhatSideCubeIs(vector<Point2f> imagePoints)
+{
+	int CubeRot = 42;
+	if((imagePoints[0].x < imagePoints[1].x && imagePoints[0].y > imagePoints[1].y) || (imagePoints[0].x < imagePoints[1].x && imagePoints[0].y < imagePoints[1].y)) //—переди или сзади
+	//Ёто сзади
+	{
+		if (imagePoints[6].y <= imagePoints[2].y)
+			if (imagePoints[1].x >= imagePoints[2].x)
+				CubeRot = 7; //ѕрава€ и верхн€€ грани на нас
+			else
+				CubeRot = 5; //Ћева€ и верхн€€
+		else 
+			if (imagePoints[1].x <= imagePoints[2].x)
+				CubeRot = 6; //ѕрава€ и нижн€€ грани
+			else
+				CubeRot = 4; //Ћева€ и нижн€€
+	}                                                                                                                             
+
+	else
+	//это спереди
+	{
+		if (imagePoints[4].y <= imagePoints[0].y)
+			if (imagePoints[3].x >= imagePoints[0].x)
+				CubeRot = 3; //ѕрава€ и верхн€€ грани на нас
+			else
+				CubeRot = 1; //Ћева€ и верхн€€
+		else 
+			if (imagePoints[3].x <= imagePoints[0].x)
+				CubeRot = 0; //ѕрава€ и нижн€€ грани
+			else
+				CubeRot = 2; //Ћева€ и нижн€€
+	}
+
+	return CubeRot;
+}
+
 void drawWunderContours(Mat inputImage, vector<int> coordinates, vector<Point2f> imagePoints, vector<pair<Point, Point>> cntsLine)
 {
 	if (coordinates.size() != 6)
@@ -39,22 +75,13 @@ void drawCube(Mat inputImage, Mat cameraMatrix, Mat distCoeffs, Vec3d rvecs, Vec
 
 	projectPoints(pointWorld, rvecs, tvecs, cameraMatrix, distCoeffs, imagePoints);
 
-	int CubeRot = 0; //Ћева€ и нижн€€
-	if (imagePoints[6].y <= imagePoints[2].y)
-		if (imagePoints[1].x >= imagePoints[2].x)
-			CubeRot = 1; //ѕрава€ и верхн€€ грани на нас
-
-		else
-			CubeRot = 3; //Ћева€ и верхн€€
-
-	else if (imagePoints[1].x <= imagePoints[2].x)
-		CubeRot = 2; //ѕрава€ и нижн€€ грани
+	
 
 	//for(int i=0; i<8; i++)
 	//	putText(inputImage, std::to_string(i), imagePoints[i], FONT_HERSHEY_SIMPLEX, 4, (255, 0, 0), 1, LINE_8);
 
 	vector<pair<Point, Point>> cntsLine;
-	switch (CubeRot)
+	switch (godPleaseShowMeWhatSideCubeIs(imagePoints))
 	{
 	case 0:
 		//¬ундер-контура
@@ -101,6 +128,53 @@ void drawCube(Mat inputImage, Mat cameraMatrix, Mat distCoeffs, Vec3d rvecs, Vec
 			{imagePoints[4], imagePoints[7]},{imagePoints[7], imagePoints[6]},
 			{imagePoints[6], imagePoints[5]},{imagePoints[5], imagePoints[4]} };
 		drawWunderContours(inputImage, { 1, 2, 3, 7, 4, 5 }, imagePoints, cntsLine);
+		break;
+
+	case 4:
+		//¬ундер-контура
+		cntsLine = {
+			{imagePoints[0], imagePoints[3]},{imagePoints[3], imagePoints[2]},
+			{imagePoints[0], imagePoints[4]},{imagePoints[3], imagePoints[7]},
+			{imagePoints[2], imagePoints[6]},
+
+			{imagePoints[6], imagePoints[5]},{imagePoints[5], imagePoints[4]},
+			{imagePoints[4], imagePoints[7]},{imagePoints[7], imagePoints[6]} };
+
+		drawWunderContours(inputImage, { 0, 3, 2, 6, 5, 4 }, imagePoints, cntsLine);
+		break;
+	case 5:
+		//¬ундер-контура
+		cntsLine = {
+			{imagePoints[0], imagePoints[1]},{imagePoints[1], imagePoints[2]},
+			{imagePoints[0], imagePoints[4]},{imagePoints[1], imagePoints[5]},
+			{imagePoints[2], imagePoints[6]},
+
+			{imagePoints[6], imagePoints[5]},{imagePoints[5], imagePoints[4]},
+			{imagePoints[4], imagePoints[7]},{imagePoints[7], imagePoints[6]} };
+		drawWunderContours(inputImage, { 0, 1, 2, 6, 7, 4 }, imagePoints, cntsLine);
+		break;
+	case 6:
+		//¬ундер-контура
+		cntsLine = {
+			{imagePoints[2], imagePoints[3]},{imagePoints[1], imagePoints[2]},
+			{imagePoints[3], imagePoints[7]},{imagePoints[2], imagePoints[6]},
+			{imagePoints[1], imagePoints[5]},
+
+			{imagePoints[6], imagePoints[5]},{imagePoints[5], imagePoints[4]},
+			{imagePoints[4], imagePoints[7]},{imagePoints[7], imagePoints[6]} };
+
+		drawWunderContours(inputImage, { 3, 2, 1, 5, 4, 7 }, imagePoints, cntsLine);
+		break;
+	case 7:
+		//¬ундер-контура
+		cntsLine = {
+			{imagePoints[0], imagePoints[3]},{imagePoints[0], imagePoints[1]},
+			{imagePoints[0], imagePoints[4]},{imagePoints[3], imagePoints[7]},
+			{imagePoints[1], imagePoints[5]},
+
+			{imagePoints[6], imagePoints[5]},{imagePoints[5], imagePoints[4]},
+			{imagePoints[4], imagePoints[7]},{imagePoints[7], imagePoints[6]} };
+		drawWunderContours(inputImage, { 3, 0, 1, 5, 6, 7 }, imagePoints, cntsLine);
 		break;
 	default:
 		// красные линии

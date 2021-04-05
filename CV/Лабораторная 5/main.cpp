@@ -89,13 +89,12 @@ int main()
 			break;
 		case '1':
 			cout << "cameraMatrix : " << cameraMatrix << endl;
+			cout << "distCoeffs : " << distCoeffs << endl;
 			cout << arucoRepErr << endl;
 			break;
 		case '2':
 			cout << "cameraMatrix : " << resultCalib[0] << endl;
 			cout << "distCoeffs : " << resultCalib[1] << endl;
-			cout << "Rotation vector : " << resultCalib[2] << endl;
-			cout << "Translation vector : " << resultCalib[3] << endl;
 			break;
 		case '3':
 			DrawCube(dictionary, cameraMatrix, distCoeffs);

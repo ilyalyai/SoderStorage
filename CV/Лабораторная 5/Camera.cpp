@@ -67,12 +67,13 @@ vector<Mat> CameraCalib()
 
 	Mat cameraMatrixChess, distCoeffsChess, R, T;
 
-	calibrateCamera(objpoints, imgpoints, Size(gray.rows, gray.cols), cameraMatrixChess, distCoeffsChess, R, T);
+	double arucoRepErr = calibrateCamera(objpoints, imgpoints, Size(gray.rows, gray.cols), cameraMatrixChess, distCoeffsChess, R, T);
 
 	ofstream resultChessBoard;
 	resultChessBoard.open("C://Users//Ilya//source//repos//lab5_CV//lab5_CV//cameraMatrixChessBoard.txt", ios::out);
 	resultChessBoard << cameraMatrixChess;
+	resultChessBoard << arucoRepErr;
 	resultChessBoard.close();
 
-	return { cameraMatrixChess, distCoeffsChess, R, T };
+	return { cameraMatrixChess, distCoeffsChess};
 }
