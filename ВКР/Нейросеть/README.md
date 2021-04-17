@@ -1,23 +1,8 @@
-# Вокселизатор для ВКР
-## Тут все что связано с вокселизатором и ВКР, собственно
+# Собственно мой магнум опус, финал всего и вся, итоговая нейросеть
+
+### Отчет к этой части [Отчет.pdf](https://github.com/ilyalyai/SoderStorage/blob/main/%D0%92%D0%9A%D0%A0/%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D1%8C/%D0%9E%D1%82%D1%87%D0%B5%D1%82_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8.pdf)
 
 
-### Отчет к этой части [Отчет.pdf](https://github.com/ilyalyai/SoderStorage/blob/main/Voxelizer/%D0%9E%D1%82%D1%87%D0%B5%D1%82.pdf)
-
-
-### Код взят отсуда и чуток доработан https://github.com/sylefeb/VoxSurf
-#### Также используется [вот этот репозиторий](https://github.com/sylefeb/LibSL-small/tree/57f6f3a4c97a551b1513f202ff286b04ef586567)
-
-#### [Матлабовская штука, в итоге получаю сетку, скорее всего будет очень удобно подавать на вход](https://www.mathworks.com/matlabcentral/fileexchange/27390-mesh-voxelisation)
-
-
-## Другие варианты вокселизаторов:
-
-[Тоже из stl, но чисто библиотека, прикольная штука](https://github.com/karimnaaji/voxelizer)
-
-[Очень многообещающая штука, но преобразует из obj в obj](https://github.com/kctess5/voxelizer)
-
-[Плюшки для .vox](https://github.com/jpaver/opengametools)
-
-[Матлабовская штука, но медленная](https://www.mathworks.com/matlabcentral/fileexchange/21044-3d-voxelizer)
+### На самом делей чисто взята вот эта нейросеть https://github.com/jianwen-xie/3DDescriptorNet и чуток доработана, чтобы принимать нужный мне датасет.
+Осталось только посчитать точности
 
