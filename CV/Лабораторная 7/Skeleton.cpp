@@ -108,7 +108,7 @@ Mat MakeSkeletImage(Mat inputImage, bool isONE)
 
 void Skeletonization()
 {
-	const Mat inputImage = imread("C://Users//Ilya//source//repos//lab7_CV//lab7_CV//img.jpg", IMREAD_GRAYSCALE);
+	const Mat inputImage = imread("img.jpg", IMREAD_GRAYSCALE);
 	if(inputImage.empty())
 	{
 		cout << endl << endl << endl << "ÈÇÎÁÐÀÆÅÍÈÅ ÍÅ ÍÀÉÄÅÍÎ" << endl << endl << endl;
