@@ -1,0 +1,204 @@
+Epoch #0, train loss: 142722.7344, train acc: 0.2905, test loss: 208158.9219, test acc: 0.3556 
+
+Epoch #1, train loss: 104410.2500, train acc: 0.2905, test loss: 84350.0938, test acc: 0.3556 
+
+Epoch #2, train loss: 50907.3359, train acc: 0.3738, test loss: 45229.0859, test acc: 0.3722 
+
+Epoch #3, train loss: 25461.7617, train acc: 0.5071, test loss: 28249.6406, test acc: 0.4444 
+
+Epoch #4, train loss: 28147.2832, train acc: 0.5071, test loss: 38326.8359, test acc: 0.4444 
+
+Epoch #5, train loss: 20195.9551, train acc: 0.5071, test loss: 36190.8086, test acc: 0.4444 
+
+Epoch #6, train loss: 23917.1289, train acc: 0.4786, test loss: 16730.2285, test acc: 0.4833 
+
+Epoch #7, train loss: 29471.0879, train acc: 0.4786, test loss: 32676.9961, test acc: 0.4833 
+
+Epoch #8, train loss: 15002.8672, train acc: 0.4786, test loss: 18659.1270, test acc: 0.4833 
+
+Epoch #9, train loss: 7969.7529, train acc: 0.7262, test loss: 22818.0332, test acc: 0.4944 
+
+Epoch #10, train loss: 7928.0127, train acc: 0.7214, test loss: 14587.1338, test acc: 0.5000 
+
+Epoch #11, train loss: 3827.1770, train acc: 0.7214, test loss: 19105.7715, test acc: 0.5000 
+
+Epoch #12, train loss: 7444.1377, train acc: 0.7214, test loss: 25946.5410, test acc: 0.5000 
+
+Epoch #13, train loss: 4314.5381, train acc: 0.7214, test loss: 25696.6328, test acc: 0.5000 
+
+Epoch #14, train loss: 1848.7712, train acc: 0.7214, test loss: 15787.3057, test acc: 0.5000 
+
+Epoch #15, train loss: 1309.5592, train acc: 0.7214, test loss: 15844.5273, test acc: 0.5000 
+
+Epoch #16, train loss: 780.3481, train acc: 0.7214, test loss: 21721.7188, test acc: 0.5000 
+
+Epoch #17, train loss: 1975.6505, train acc: 0.7214, test loss: 18972.7617, test acc: 0.5000 
+
+Epoch #18, train loss: 2390.8862, train acc: 0.7214, test loss: 23698.3125, test acc: 0.5000 
+
+Epoch #19, train loss: 1701.8417, train acc: 0.7214, test loss: 21566.9570, test acc: 0.5000 
+
+Epoch #20, train loss: 2089.4990, train acc: 0.7214, test loss: 20676.2148, test acc: 0.5000 
+
+Epoch #21, train loss: 3803.5403, train acc: 0.7214, test loss: 21587.3652, test acc: 0.5000 
+
+Epoch #22, train loss: 6019.5498, train acc: 0.7214, test loss: 27871.8555, test acc: 0.5000 
+
+Epoch #23, train loss: 4896.1025, train acc: 0.7214, test loss: 21872.6309, test acc: 0.5000 
+
+Epoch #24, train loss: 2885.4412, train acc: 0.7214, test loss: 20609.9512, test acc: 0.5000 
+
+Epoch #25, train loss: 1851.2858, train acc: 0.8952, test loss: 23103.4238, test acc: 0.5056 
+
+Epoch #26, train loss: 1048.8645, train acc: 0.8952, test loss: 24386.6699, test acc: 0.5056 
+
+Epoch #27, train loss: 605.3661, train acc: 0.8952, test loss: 16889.6738, test acc: 0.5056 
+
+Epoch #28, train loss: 743.1129, train acc: 0.8952, test loss: 16233.4580, test acc: 0.5056 
+
+Epoch #29, train loss: 196.9065, train acc: 0.8952, test loss: 23883.4141, test acc: 0.5056 
+
+Epoch #30, train loss: 224.1803, train acc: 0.8952, test loss: 22395.2031, test acc: 0.5056 
+
+Epoch #31, train loss: 48.2330, train acc: 0.8952, test loss: 21416.3320, test acc: 0.5056 
+
+Epoch #32, train loss: 150.4967, train acc: 0.8952, test loss: 17713.4414, test acc: 0.5056 
+
+Epoch #33, train loss: 66.7426, train acc: 0.9929, test loss: 17092.3730, test acc: 0.5222 
+
+Epoch #34, train loss: 199.0938, train acc: 0.9929, test loss: 19842.9746, test acc: 0.5222 
+
+Epoch #35, train loss: 76.1328, train acc: 0.9929, test loss: 30111.5703, test acc: 0.5222 
+
+Epoch #36, train loss: 1950.9337, train acc: 0.9929, test loss: 20091.9355, test acc: 0.5222 
+
+Epoch #37, train loss: 2419.6660, train acc: 0.9929, test loss: 27238.0762, test acc: 0.5222 
+
+Epoch #38, train loss: 4370.6177, train acc: 0.9929, test loss: 34706.4844, test acc: 0.5222 
+
+Epoch #39, train loss: 2303.6218, train acc: 0.9929, test loss: 20052.7402, test acc: 0.5222 
+
+Epoch #40, train loss: 1692.8868, train acc: 0.9119, test loss: 16863.8711, test acc: 0.5556 
+
+Epoch #41, train loss: 959.5543, train acc: 0.9119, test loss: 29274.2422, test acc: 0.5556 
+
+Epoch #42, train loss: 1118.4413, train acc: 0.9119, test loss: 20498.2500, test acc: 0.5556 
+
+Epoch #43, train loss: 268.0158, train acc: 0.9119, test loss: 21972.5527, test acc: 0.5556 
+
+Epoch #44, train loss: 209.8946, train acc: 0.9119, test loss: 19249.1914, test acc: 0.5556 
+
+Epoch #45, train loss: 247.5020, train acc: 0.9119, test loss: 20588.6289, test acc: 0.5556 
+
+Epoch #46, train loss: 246.7042, train acc: 0.9119, test loss: 24141.9453, test acc: 0.5556 
+
+Epoch #47, train loss: 123.4554, train acc: 0.9119, test loss: 25391.7461, test acc: 0.5556 
+
+Epoch #48, train loss: 454.2933, train acc: 0.9119, test loss: 26698.1328, test acc: 0.5556 
+
+Epoch #49, train loss: 2360.7144, train acc: 0.9119, test loss: 19451.5723, test acc: 0.5556 
+
+Epoch #50, train loss: 1367.1244, train acc: 0.9119, test loss: 25413.3672, test acc: 0.5556 
+
+Epoch #51, train loss: 504.5288, train acc: 0.9119, test loss: 30780.5078, test acc: 0.5556 
+
+Epoch #52, train loss: 1200.3508, train acc: 0.9119, test loss: 27332.2324, test acc: 0.5556 
+
+Epoch #53, train loss: 1085.5724, train acc: 0.9119, test loss: 27018.6172, test acc: 0.5556 
+
+Epoch #54, train loss: 1409.6061, train acc: 0.9119, test loss: 28701.5625, test acc: 0.5556 
+
+Epoch #55, train loss: 1416.5406, train acc: 0.9119, test loss: 32776.7344, test acc: 0.5556 
+
+Epoch #56, train loss: 10669.7998, train acc: 0.9119, test loss: 23423.1953, test acc: 0.5556 
+
+Epoch #57, train loss: 5831.5815, train acc: 0.9119, test loss: 45278.6680, test acc: 0.5556 
+
+Epoch #58, train loss: 16453.2227, train acc: 0.9119, test loss: 42307.7070, test acc: 0.5556 
+
+Epoch #59, train loss: 33358.6953, train acc: 0.9119, test loss: 93473.1953, test acc: 0.5556 
+
+Epoch #60, train loss: 40597.0078, train acc: 0.9119, test loss: 59103.7070, test acc: 0.5556 
+
+Epoch #61, train loss: 23833.8125, train acc: 0.9119, test loss: 42104.0820, test acc: 0.5556 
+
+Epoch #62, train loss: 15588.7832, train acc: 0.9119, test loss: 38924.4102, test acc: 0.5556 
+
+Epoch #63, train loss: 11610.1777, train acc: 0.9119, test loss: 52854.9336, test acc: 0.5556 
+
+Epoch #64, train loss: 7825.7158, train acc: 0.9119, test loss: 43005.5117, test acc: 0.5556 
+
+Epoch #65, train loss: 2891.5376, train acc: 0.9119, test loss: 35517.6328, test acc: 0.5556 
+
+Epoch #66, train loss: 2163.8425, train acc: 0.9119, test loss: 32773.3320, test acc: 0.5556 
+
+Epoch #67, train loss: 2134.1343, train acc: 0.9119, test loss: 34607.6250, test acc: 0.5556 
+
+Epoch #68, train loss: 1674.5695, train acc: 0.9119, test loss: 38913.9570, test acc: 0.5556 
+
+Epoch #69, train loss: 1447.0868, train acc: 0.9119, test loss: 39350.8359, test acc: 0.5556 
+
+Epoch #70, train loss: 1554.0828, train acc: 0.9119, test loss: 47851.6211, test acc: 0.5556 
+
+Epoch #71, train loss: 898.2576, train acc: 0.9119, test loss: 39700.3945, test acc: 0.5556 
+
+Epoch #72, train loss: 625.8394, train acc: 0.9119, test loss: 38895.8906, test acc: 0.5556 
+
+Epoch #73, train loss: 220.5989, train acc: 0.9119, test loss: 36385.0625, test acc: 0.5556 
+
+Epoch #74, train loss: 221.0984, train acc: 0.9119, test loss: 38362.3555, test acc: 0.5556 
+
+Epoch #75, train loss: 86.5786, train acc: 0.9119, test loss: 39506.8281, test acc: 0.5556 
+
+Epoch #76, train loss: 319.6911, train acc: 0.9119, test loss: 38362.6719, test acc: 0.5556 
+
+Epoch #77, train loss: 58.1308, train acc: 0.9119, test loss: 39802.9688, test acc: 0.5556 
+
+Epoch #78, train loss: 257.4883, train acc: 0.9119, test loss: 43268.9766, test acc: 0.5556 
+
+Epoch #79, train loss: 36.0795, train acc: 0.9119, test loss: 44649.8672, test acc: 0.5556 
+
+Epoch #80, train loss: 87.3781, train acc: 0.9119, test loss: 44784.4336, test acc: 0.5556 
+
+Epoch #81, train loss: 3.9953, train acc: 0.9119, test loss: 43808.8320, test acc: 0.5556 
+
+Epoch #82, train loss: 12.1152, train acc: 0.9119, test loss: 37105.4180, test acc: 0.5556 
+
+Epoch #83, train loss: 47.8670, train acc: 0.9119, test loss: 36332.7148, test acc: 0.5556 
+
+Epoch #84, train loss: 0.0000, train acc: 0.9119, test loss: 39929.4062, test acc: 0.5556 
+
+Epoch #85, train loss: 0.0000, train acc: 0.9119, test loss: 42386.0156, test acc: 0.5556 
+
+Epoch #86, train loss: 15.0391, train acc: 0.9119, test loss: 39384.1094, test acc: 0.5556 
+
+Epoch #87, train loss: 0.0000, train acc: 0.9119, test loss: 39864.0195, test acc: 0.5556 
+
+Epoch #88, train loss: 0.0000, train acc: 0.9119, test loss: 42666.3203, test acc: 0.5556 
+
+Epoch #89, train loss: 25.2339, train acc: 0.9119, test loss: 39241.3398, test acc: 0.5556 
+
+Epoch #90, train loss: 0.0000, train acc: 0.9119, test loss: 42277.2656, test acc: 0.5556 
+
+Epoch #91, train loss: 0.0000, train acc: 0.9119, test loss: 44618.6523, test acc: 0.5556 
+
+Epoch #92, train loss: 39.3687, train acc: 0.9119, test loss: 40391.6094, test acc: 0.5556 
+
+Epoch #93, train loss: 301.0009, train acc: 0.9119, test loss: 38630.0781, test acc: 0.5556 
+
+Epoch #94, train loss: 0.0000, train acc: 0.9119, test loss: 49189.0156, test acc: 0.5556 
+
+Epoch #95, train loss: 899.3007, train acc: 0.9119, test loss: 37683.2031, test acc: 0.5556 
+
+Epoch #96, train loss: 1927.2828, train acc: 0.9119, test loss: 42744.2500, test acc: 0.5556 
+
+Epoch #97, train loss: 1471.4590, train acc: 0.9119, test loss: 56348.8594, test acc: 0.5556 
+
+Epoch #98, train loss: 2542.7427, train acc: 0.9119, test loss: 48222.3750, test acc: 0.5556 
+
+Epoch #99, train loss: 728.5732, train acc: 0.9119, test loss: 48429.2344, test acc: 0.5556 
+
+Epoch #100, train loss: 14.9926, train acc: 0.9119, test loss: 41559.3438, test acc: 0.5556 
+
+Epoch #101, train loss: 1319.9573, train acc: 0.9119, test loss: 35872.7500, test acc: 0.5556 
+
